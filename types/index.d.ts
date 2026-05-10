@@ -108,16 +108,6 @@ interface DefaultConfig {
       to: string;
       target: string;
     })[];
-    carbonAds: {
-      enable: boolean;
-      disableInDev: boolean;
-      disableInMobile: boolean;
-      fallback: boolean;
-      fallbackMessage: string;
-      code: string;
-      placement: string;
-      format: 'cover' | 'responsive';
-    };
   };
   search: {
     enable: boolean;

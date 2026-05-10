@@ -233,16 +233,6 @@ export default defineAppConfig({
           target: '_blank',
         },
       ],
-      carbonAds: {
-        enable: true,
-        disableInDev: true,
-        disableInMobile: false,
-        fallback: false,
-        fallbackMessage: 'Please support us by disabling your ad blocker.',
-        code: 'CW7ITKJN',
-        placement: 'shadcn-docs-nuxtvercelapp',
-        format: 'cover',
-      },
     },
     search: {
       enable: true,

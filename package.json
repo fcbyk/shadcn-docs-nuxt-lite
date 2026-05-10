@@ -42,7 +42,6 @@
     "@nuxtjs/i18n": "^10.3.0",
     "@nuxtjs/mdc": "^0.21.1",
     "@tailwindcss/vite": "^4.2.4",
-    "@takumi-rs/core": "^1.1.2",
     "@ztl-uwu/nuxt-content": "^2.14.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

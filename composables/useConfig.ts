@@ -131,16 +131,6 @@ const defaultConfig: DefaultConfig = {
     title: 'On This Page',
     links: [],
     iconLinks: [],
-    carbonAds: {
-      enable: false,
-      disableInDev: false,
-      disableInMobile: false,
-      fallback: false,
-      fallbackMessage: 'Please support us by disabling your ad blocker.',
-      code: '',
-      placement: '',
-      format: 'cover',
-    },
   },
   search: {
     enable: true,
