@@ -2,9 +2,6 @@ interface DefaultConfig {
   site: {
     name: string;
     description: string;
-    ogImage: string;
-    ogImageComponent: string;
-    ogImageColor: 'dark' | 'light';
     umami: {
       enable: boolean;
       dataWebsiteId: string;

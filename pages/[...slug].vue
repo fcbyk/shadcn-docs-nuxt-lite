@@ -79,8 +79,6 @@
 </template>
 
 <script setup lang="ts">
-import type { OgImageComponents } from '#og-image/components';
-
 const { page } = useContent();
 const config = useConfig();
 const appConfig = useAppConfig();
@@ -89,14 +87,7 @@ const isDev = import.meta.dev;
 
 useSeoMeta({
   title: `${page.value?.title ?? '404'} - ${config.value.site.name}`,
-  ogTitle: page.value?.title,
   description: page.value?.description || undefined,
-  ogDescription: page.value?.description || undefined,
   twitterCard: 'summary_large_image',
-});
-
-defineOgImage(config.value.site.ogImageComponent as keyof OgImageComponents, {
-  title: page.value?.title,
-  description: page.value?.description,
 });
 </script>

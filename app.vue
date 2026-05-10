@@ -44,7 +44,6 @@ const baseRouteName = computed(() => useRouteBaseName()(route));
 
 useSeoMeta({
   description: config.value.site.description,
-  ogDescription: config.value.site.description,
   twitterCard: 'summary_large_image',
 });
 
