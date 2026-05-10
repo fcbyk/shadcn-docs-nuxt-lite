@@ -1,26 +1,10 @@
 {
-  "name": "shadcn-docs-nuxt",
+  "name": "@fcbyk/shadcn-docs-nuxt-lite",
   "type": "module",
-  "version": "1.2.1",
+  "version": "2026.5.10",
   "packageManager": "pnpm@11.0.3",
-  "description": "Effortless and beautiful docs template built with Nuxt Content & shadcn-vue.",
-  "author": "Tony Zhang <zhangtianli2006@gmail.com>",
+  "description": "A lite version of shadcn-docs-nuxt focused on writing Markdown docs.",
   "license": "MIT",
-  "homepage": "https://shadcn-docs-nuxt.vercel.app/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZTL-UwU/shadcn-docs-nuxt.git"
-  },
-  "bugs": "https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues",
-  "keywords": [
-    "markdown",
-    "docs",
-    "vue",
-    "nuxt",
-    "documentation-tool",
-    "nuxt-content",
-    "shadcn-vue"
-  ],
   "main": "./nuxt.config.ts",
   "files": [
     "app",
