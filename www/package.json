@@ -1,0 +1,19 @@
+{
+  "name": "www",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@iconify-json/lucide-lab": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.80",
+    "nuxt": "^4.4.4",
+    "vue": "^3.5.33",
+    "vue-router": "^5.0.6"
+  }
+}
