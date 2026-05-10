@@ -2,10 +2,6 @@ interface DefaultConfig {
   site: {
     name: string;
     description: string;
-    umami: {
-      enable: boolean;
-      dataWebsiteId: string;
-    };
   };
   theme: {
     customizable: boolean;

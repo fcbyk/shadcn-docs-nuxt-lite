@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon',
     '@nuxtjs/color-mode',
-    '@nuxt/scripts',
     '@nuxtjs/i18n',
     '@nuxt/fonts',
   ],
