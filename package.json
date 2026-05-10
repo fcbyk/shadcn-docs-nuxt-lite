@@ -16,6 +16,8 @@
     "layouts",
     "lib",
     "nuxt.config.ts",
+    "modules",
+    "tailwind.config.js",
     "pages",
     "plugins",
     "types"
@@ -52,13 +54,13 @@
     "tailwindcss": "^4.2.4",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^6.0.3",
-    "ufo": "^1.6.4"
+    "ufo": "^1.6.4",
+    "@nuxt/kit": "^4.4.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^8.2.0",
     "@iconify/utils": "^3.1.1",
     "@nuxt/devtools": "^3.2.4",
-    "@nuxt/kit": "^4.4.4",
     "@vueuse/core": "^14.3.0",
     "@vueuse/nuxt": "^14.3.0",
     "eslint": "^10.2.1",

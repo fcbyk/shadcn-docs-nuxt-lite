@@ -36,10 +36,6 @@ export default defineNuxtConfig({
     classSuffix: '',
     disableTransition: true,
   },
-  css: [
-    join(currentDir, './assets/css/themes.css'),
-    '~/assets/css/tailwind.css',
-  ],
   content: {
     documentDriven: true,
     highlight: {

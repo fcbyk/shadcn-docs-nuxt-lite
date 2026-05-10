@@ -23,6 +23,9 @@ importers:
       '@nuxt/image':
         specifier: ^2.0.0
         version: 2.0.0(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(srvx@0.11.15)
+      '@nuxt/kit':
+        specifier: ^4.4.4
+        version: 4.4.4(magicast@0.5.2)
       '@nuxt/scripts':
         specifier: ^1.0.5
         version: 1.0.5(@unhead/vue@2.1.13(vue@3.5.33(typescript@6.0.3)))(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.3)(vite@7.3.2(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.3))(vue@3.5.33(typescript@6.0.3))
@@ -84,9 +87,6 @@ importers:
       '@nuxt/devtools':
         specifier: ^3.2.4
         version: 3.2.4(vite@7.3.2(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.3))(vue@3.5.33(typescript@6.0.3))
-      '@nuxt/kit':
-        specifier: ^4.4.4
-        version: 4.4.4(magicast@0.5.2)
       '@vueuse/core':
         specifier: ^14.3.0
         version: 14.3.0(vue@3.5.33(typescript@6.0.3))
