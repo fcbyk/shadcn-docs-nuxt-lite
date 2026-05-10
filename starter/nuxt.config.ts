@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  extends: ['shadcn-docs-nuxt'],
+  extends: ['@fcbyk/shadcn-docs-nuxt-lite'],
   i18n: {
     defaultLocale: 'en',
     locales: [

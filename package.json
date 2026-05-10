@@ -21,6 +21,7 @@
     "types"
   ],
   "scripts": {
+    "pack:local": "mkdir -p dist && find dist -name '*.tgz' -delete && pnpm pack --pack-destination dist && mv dist/*.tgz dist/local-pkg.tgz",
     "build": "nuxt prepare && nuxt build www",
     "dev": "nuxt prepare && nuxt dev www",
     "generate": "nuxt prepare && nuxt generate www",

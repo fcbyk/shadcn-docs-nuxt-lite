@@ -2,7 +2,7 @@
 
 @config '../../tailwind.config.js';
 /* If you are using shadcn-docs-nuxt in a monorepo, change the amount of .. to match the node_modules directory */
-@source '../../node_modules/shadcn-docs-nuxt';
+@source '../../node_modules/@fcbyk/shadcn-docs-nuxt-lite';
 
 @layer base {
   *,
