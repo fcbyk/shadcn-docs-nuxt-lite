@@ -8,6 +8,7 @@
       :value="page"
       :data="(appConfig.shadcnDocs as any)?.data"
     />
+    <LayoutFooter />
   </div>
 </template>
 

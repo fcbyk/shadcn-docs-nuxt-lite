@@ -90,7 +90,6 @@ interface DefaultConfig {
   };
   footer: {
     credits: string;
-    border: boolean;
     links: ({
       icon: string;
       title: string;

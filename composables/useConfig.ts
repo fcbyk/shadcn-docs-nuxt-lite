@@ -127,7 +127,6 @@ const defaultConfig: DefaultConfig = {
     },
   },
   footer: {
-    border: true,
     credits: '',
     links: [],
   },
