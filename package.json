@@ -1,7 +1,7 @@
 {
   "name": "@fcbyk/shadcn-docs-nuxt-lite",
   "type": "module",
-  "version": "2026.5.10",
+  "version": "2026.5.12",
   "packageManager": "pnpm@11.0.3",
   "description": "A lite version of shadcn-docs-nuxt focused on writing Markdown docs.",
   "license": "MIT",
