@@ -39,8 +39,21 @@ const { page } = useContent();
 const config = useConfig();
 const route = useRoute();
 const { themeClass, radius, setClassTheme } = useThemes();
+const nuxtApp = useNuxtApp();
 
-const baseRouteName = computed(() => useRouteBaseName()(route));
+// Get base route name with fallback support
+const baseRouteName = computed(() => {
+  // useRouteBaseName is only available when i18n is installed
+  const useRouteBaseNameFn = nuxtApp.$routeBaseName;
+  return useRouteBaseNameFn ? useRouteBaseNameFn(route) : (route.path === '/' ? 'index' : 'docs');
+});
+
+// Get locale with fallback support
+const currentLocale = computed(() => {
+  return typeof nuxtApp.$i18n !== 'undefined' 
+    ? (nuxtApp.$i18n as any).locale.value 
+    : 'en';
+});
 
 useSeoMeta({
   description: config.value.site.description,
@@ -49,7 +62,7 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: {
-    lang: useI18n().locale,
+    lang: currentLocale,
   },
   bodyAttrs: {
     class: themeClass.value,

@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon',
     '@nuxtjs/color-mode',
-    '@nuxtjs/i18n',
     '@nuxt/fonts',
   ],
   shadcn: {
@@ -27,9 +26,6 @@ export default defineNuxtConfig({
         ignore: ['**/*.ts'],
       },
     ],
-  },
-  i18n: {
-    strategy: 'prefix_except_default',
   },
   colorMode: {
     classSuffix: '',

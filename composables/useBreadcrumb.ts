@@ -17,7 +17,12 @@ export function useBreadcrumb(url: string): BreadcrumbItem[] {
   if (!nav)
     return [];
 
-  const { locale } = useI18n();
+  // Get current locale with fallback
+  const nuxtApp = useNuxtApp();
+  const locale = typeof nuxtApp.$i18n !== 'undefined' 
+    ? (nuxtApp.$i18n as any).locale.value 
+    : 'en';
+    
   for (let i = 0; i < segments.length; i++) {
     const segment = segments[i]!.replace('.html', '');
     href += `/${segment}`;
@@ -25,7 +30,7 @@ export function useBreadcrumb(url: string): BreadcrumbItem[] {
     const page = nav?.find(x => (x._path as string) === href);
     nav = page?.children;
 
-    if (!(i === 0 && segment === locale.value))
+    if (!(i === 0 && segment === locale))
       breadcrumbItems.push({ title: page?.title ?? segment, href });
   }
   return breadcrumbItems;

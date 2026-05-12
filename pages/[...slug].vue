@@ -45,11 +45,8 @@
             </UiEmptyMedia>
             <UiEmptyTitle>{{ $t('Empty page') }}</UiEmptyTitle>
             <UiEmptyDescription v-if="isDev">
-              <i18n-t keypath="Start writing content">
-                <template #fileLink>
-                  <ProseCodeInline>content/{{ page?._file }}</ProseCodeInline>
-                </template>
-              </i18n-t>
+              {{ $t('Start writing content', { fileLink: '' }) }}
+              <ProseCodeInline>content/{{ page?._file }}</ProseCodeInline>
             </UiEmptyDescription>
           </UiEmptyHeader>
         </UiEmpty>

@@ -22,7 +22,7 @@
         />
       </div>
       <div v-if="links.length" class="text-muted-foreground" :class="[iconLinks?.length && 'border-b pb-5']">
-        <NuxtLinkLocale
+        <CompatNuxtLinkLocale
           v-for="(link, i) in links"
           :key="i"
           :to="localePath(link.to)"
@@ -36,10 +36,10 @@
           />
           {{ $t(link.title) }}
           <Icon v-if="link.showLinkIcon ?? (link.target === '_blank')" name="lucide:arrow-up-right" class="text-muted-foreground ml-auto self-center" size="13" />
-        </NuxtLinkLocale>
+        </CompatNuxtLinkLocale>
       </div>
       <div v-if="iconLinks" class="text-muted-foreground">
-        <NuxtLinkLocale
+        <CompatNuxtLinkLocale
           v-for="(link, i) in iconLinks"
           :key="i"
           :to="localePath(link.to)"
@@ -51,7 +51,7 @@
               :name="link.icon"
             />
           </UiButton>
-        </NuxtLinkLocale>
+        </CompatNuxtLinkLocale>
       </div>
       <div class="flex-grow" />
     </div>

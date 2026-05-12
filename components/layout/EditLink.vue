@@ -1,6 +1,6 @@
 <template>
   <div v-if="enabledDocsFooter" class="w-fit">
-    <NuxtLinkLocale
+    <CompatNuxtLinkLocale
       :to="url"
       target="_blank"
       class="text-primary text-sm font-semibold"
@@ -11,7 +11,7 @@
           {{ $t(text) }}
         </span>
       </div>
-    </NuxtLinkLocale>
+    </CompatNuxtLinkLocale>
   </div>
 </template>
 

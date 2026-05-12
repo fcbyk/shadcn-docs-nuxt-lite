@@ -7,12 +7,48 @@ import type { SearchResult } from 'minisearch';
  * Falls back gracefully when i18n is not configured.
  */
 export function useI18nDocs() {
-  // Check if i18n is enabled by verifying config exists and there are multiple locales
-  const i18nEnabled = !!useI18n() && useI18n().availableLocales?.length > 1;
+  const nuxtApp = useNuxtApp();
+  
+  // Check if i18n is enabled by verifying $i18n exists and has multiple locales
+  const hasRealI18n = typeof nuxtApp.$i18n !== 'undefined';
+  const i18nEnabled = hasRealI18n && (nuxtApp.$i18n as any).availableLocales?.length > 1;
 
-  // Get content navigation and i18n utilities
+  // Get content navigation
   const { navigation, next, prev } = useContent();
-  const { locale, locales, defaultLocale, availableLocales } = useI18n();
+  
+  // Get i18n utilities (real or fallback)
+  let locale: Ref<string>;
+  let locales: Ref<any[]>;
+  let defaultLocale: string;
+  let availableLocales: string[];
+  let localePathFn: (path: string) => string;
+  let switchLocalePathFn: (localeCode: string) => string;
+  
+  if (hasRealI18n) {
+    const i18n = nuxtApp.$i18n as any;
+    locale = i18n.locale;
+    locales = i18n.locales;
+    defaultLocale = i18n.defaultLocale;
+    availableLocales = i18n.availableLocales;
+    
+    // These functions are only available when i18n module is installed
+    // We need to check if they exist before calling them
+    const nuxtAppInstance = useNuxtApp();
+    localePathFn = typeof nuxtAppInstance.$localePath === 'function' 
+      ? (nuxtAppInstance.$localePath as (path: string) => string)
+      : (path: string) => path;
+    switchLocalePathFn = typeof nuxtAppInstance.$switchLocalePath === 'function'
+      ? (nuxtAppInstance.$switchLocalePath as (localeCode: string) => string)
+      : () => '/';
+  } else {
+    // Fallback values
+    locale = ref('en');
+    locales = ref([{ code: 'en', name: 'English', language: 'en-US' }]);
+    defaultLocale = 'en';
+    availableLocales = ['en'];
+    localePathFn = (path: string) => path;
+    switchLocalePathFn = () => '/';
+  }
 
   // Get all locales except the default one
   const otherLocales = availableLocales.filter(l => l !== defaultLocale);
@@ -94,7 +130,7 @@ export function useI18nDocs() {
    * Safe wrapper for useLocalePath
    * Returns original path if i18n is not enabled
    */
-  const localePath = i18nEnabled ? useLocalePath() : (path: string) => path;
+  const safeLocalePath = i18nEnabled ? localePathFn : (path: string) => path;
 
   /**
    * Filters search results based on the current locale
@@ -113,7 +149,7 @@ export function useI18nDocs() {
     : (result: SearchResult[]) => result;
 
   // Get the locale switcher utility
-  const switchLocalePath = useSwitchLocalePath();
+  const safeSwitchLocalePath = i18nEnabled ? switchLocalePathFn : (() => '/');
 
   return {
     i18nEnabled, // Whether i18n is enabled and configured
@@ -125,8 +161,8 @@ export function useI18nDocs() {
     navigation: localizedNavigation, // Navigation filtered by current locale
     prev: localizedPrev, // Previous page navigation filtered by current locale
     next: localizedNext, // Next page navigation filtered by current locale
-    localePath, // Safe path localization function
+    localePath: safeLocalePath, // Safe path localization function
     localizeSearchResult, // Search results filter by locale
-    switchLocalePath, // Function to switch between locales
+    switchLocalePath: safeSwitchLocalePath, // Function to switch between locales
   };
 }

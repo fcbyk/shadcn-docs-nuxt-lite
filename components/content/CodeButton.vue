@@ -40,7 +40,12 @@ const { copy } = useClipboard({ source: code, legacy: true });
 const copied = ref(false);
 
 const { toast } = useToast();
-const { t } = useI18n();
+
+// Use i18n with fallback
+const nuxtApp = useNuxtApp();
+const t = typeof nuxtApp.$i18n !== 'undefined' 
+  ? (nuxtApp.$i18n as any).t 
+  : nuxtApp.$t;
 
 async function handleClick() {
   await copy(code.replaceAll(/\s*\/\/\s*\[!code (focus|\+\+|--|error|warning)\]/g, ''));

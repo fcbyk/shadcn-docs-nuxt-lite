@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['..'],
+  
+  // i18n configuration for multi-language support
   i18n: {
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
     locales: [
       {
@@ -17,6 +20,7 @@ export default defineNuxtConfig({
       },
     ],
   },
+  
   content: {
     highlight: {
       langs: ['mdc', 'mermaid', 'tsx'],

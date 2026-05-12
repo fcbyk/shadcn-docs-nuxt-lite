@@ -1,11 +1,11 @@
 <template>
-  <NuxtLinkLocale :to="to || href" :target="(blank && '_blank') || target">
+  <CompatNuxtLinkLocale :to="to || href" :target="(blank && '_blank') || target">
     <UiButton :variant :size>
       <SmartIcon v-if="leftIcon" :name="leftIcon" class="mr-1" />
       <ContentSlot unwrap="p" />
       <SmartIcon v-if="rightIcon" :name="rightIcon" class="ml-1" />
     </UiButton>
-  </NuxtLinkLocale>
+  </CompatNuxtLinkLocale>
 </template>
 
 <script setup lang="ts">

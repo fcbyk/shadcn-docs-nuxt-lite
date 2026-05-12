@@ -133,7 +133,7 @@ badges:
   ::div{class="p-4"}
   ::card
   ---
-  img: /og-nuxt.png
+  img: /hero.png
   ---
   #title
   Image Card
@@ -145,7 +145,7 @@ badges:
   ```mdc
   ::card
   ---
-  img: /og-nuxt.png
+  img: /hero.png
   ---
   #title
   Image Card

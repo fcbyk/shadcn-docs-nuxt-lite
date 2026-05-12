@@ -1,12 +1,12 @@
 <template>
-  <NuxtLinkLocale
+  <CompatNuxtLinkLocale
     :to="href"
     :target="target"
     :external="external"
     class="font-semibold underline underline-offset-4"
   >
     <slot />
-  </NuxtLinkLocale>
+  </CompatNuxtLinkLocale>
 </template>
 
 <script setup lang="ts">

@@ -54,9 +54,9 @@ const typeTwClass = {
   secondary: 'bg-muted/50',
 };
 
-async function alertClick() {
-  const localePath = useLocalePath();
+const { localePath } = useI18nDocs();
 
+async function alertClick() {
   if (to) {
     const localeTo = localePath(to);
     if (target) {

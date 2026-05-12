@@ -1,5 +1,5 @@
 <template>
-  <NuxtLinkLocale v-if="to" :to :target class="mx-0.5">
+  <CompatNuxtLinkLocale v-if="to" :to :target class="mx-0.5">
     <UiBadge
       :variant
       :class="[
@@ -9,7 +9,7 @@
     >
       <ContentSlot unwrap="p" />
     </UiBadge>
-  </NuxtLinkLocale>
+  </CompatNuxtLinkLocale>
 
   <span v-else class="mx-0.5">
     <UiBadge
