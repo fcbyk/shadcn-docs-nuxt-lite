@@ -1,10 +1,5 @@
 <template>
-  <MermaidRenderer v-if="isMermaid" :code="code" :parsed-meta="parsedMeta">
-    <slot />
-  </MermaidRenderer>
-
   <UiCard
-    v-else
     class="bg-[#FBFBFB] dark:bg-[#121215] relative overflow-hidden [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5"
     :class="[
       (inGroup || inTree) && 'mb-0 rounded-t-none border-none shadow-none',
@@ -103,8 +98,6 @@ const parsedMeta = computed(() => {
 });
 
 const expanded = ref(false);
-
-const isMermaid = computed(() => language === 'mermaid' || parsedMeta.value.has('mermaid'));
 
 const iconMap = new Map(Object.entries(useConfig().value.main.codeIcon));
 const icon = computed(() => {

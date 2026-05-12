@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   
   content: {
     highlight: {
-      langs: ['mdc', 'mermaid', 'tsx'],
+      langs: ['mdc', 'tsx'],
     },
   },
   compatibilityDate: '2025-05-13',

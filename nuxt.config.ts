@@ -79,8 +79,6 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: [
         'debug',
-        // https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues/205
-        'mermaid',
       ],
     },
   },
