@@ -19,13 +19,11 @@ interface DefaultConfig {
   header: {
     showLoadingIndicator: boolean;
     title: string;
-    showTitle: boolean;
     border: boolean;
-    logo: {
+    logo?: {
       light: string;
       dark: string;
     };
-    showTitleInMobile: boolean;
     darkModeToggle: boolean;
     languageSwitcher: {
       enable: boolean;

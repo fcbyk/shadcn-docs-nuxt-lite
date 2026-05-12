@@ -9,12 +9,12 @@
         'container max-w-screen-2xl': config.main.padded,
       }"
     >
-      <LayoutHeaderLogo class="hidden flex-1 md:flex" />
-      <LayoutMobileNav />
-      <LayoutHeaderLogo v-if="config.header.showTitleInMobile" class="flex md:hidden" />
+      <LayoutHeaderLogo class="flex-1 flex" />
       <LayoutHeaderNav class="hidden flex-1 lg:flex" />
       <div class="flex flex-1 justify-end gap-2">
-        <LayoutSearchButton v-if="!config.search.inAside && config.search.style === 'input'" />
+        <div class="hidden md:flex">
+          <LayoutSearchButton v-if="!config.search.inAside && config.search.style === 'input'" />
+        </div>
         <div class="flex">
           <LayoutSearchButton v-if="!config.search.inAside && config.search.style === 'button'" />
           <LangSwitcher v-if="i18nEnabled" />
@@ -31,6 +31,7 @@
             </UiButton>
           </CompatNuxtLinkLocale>
         </div>
+        <LayoutMobileNav />
       </div>
     </div>
     <div

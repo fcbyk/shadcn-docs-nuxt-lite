@@ -28,12 +28,6 @@ const defaultConfig: DefaultConfig = {
   header: {
     showLoadingIndicator: true,
     title: 'shadcn-docs',
-    showTitle: true,
-    logo: {
-      light: '/logo.svg',
-      dark: '/logo-dark.svg',
-    },
-    showTitleInMobile: false,
     border: false,
     darkModeToggle: true,
     languageSwitcher: {

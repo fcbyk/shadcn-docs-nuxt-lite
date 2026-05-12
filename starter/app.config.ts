@@ -11,7 +11,6 @@ export default defineAppConfig({
     },
     header: {
       title: 'shadcn-docs-starter',
-      showTitle: true,
       darkModeToggle: true,
       languageSwitcher: {
         enable: false,
