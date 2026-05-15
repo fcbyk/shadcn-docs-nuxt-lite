@@ -95,7 +95,6 @@ export default defineAppConfig({
       folderStyle: 'default',
     },
     main: {
-      padded: true,
       breadCrumb: true,
       showTitle: true,
       codeCopyToast: false,

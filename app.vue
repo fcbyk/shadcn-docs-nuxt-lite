@@ -7,9 +7,8 @@
     :class="config.banner.enable ? 'min-h-[calc(100vh-101px)]' : 'min-h-[calc(100vh-56px)]'"
   >
     <div
-      class="flex-1 items-start px-4 md:grid md:gap-6 md:px-8 lg:gap-10"
+      class="container flex-1 items-start px-4 md:grid md:gap-6 md:px-8 lg:gap-10"
       :class="[
-        config.main.padded && 'container',
         (page.aside ?? true) && 'md:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[240px_minmax(0,1fr)]',
       ]"
     >

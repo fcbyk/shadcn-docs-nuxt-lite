@@ -59,7 +59,6 @@ interface DefaultConfig {
     codeCopyIcon: string;
     codeCopyToastText: string;
     fieldRequiredText: string;
-    padded: boolean;
     editLink: {
       enable: boolean;
       pattern: string;

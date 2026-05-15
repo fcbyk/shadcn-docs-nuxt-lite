@@ -4,10 +4,7 @@
     :class="{ 'border-b': config.header.border }"
   >
     <div
-      class="flex h-14 items-center justify-between gap-2 px-4 md:px-8"
-      :class="{
-        'container': config.main.padded,
-      }"
+      class="container flex h-14 items-center justify-between gap-2 px-4 md:px-8"
     >
       <LayoutHeaderLogo class="flex-1 flex" />
       <LayoutHeaderNav class="hidden flex-1 lg:flex" />
@@ -35,10 +32,7 @@
     </div>
     <div
       v-if="baseRouteName !== 'index' && config.aside.levelStyle === 'header'"
-      class="md:mt-2 md:px-8"
-      :class="{
-        'md:container md:max-w-screen-2xl': config.main.padded,
-      }"
+      class="md:container md:max-w-screen-2xl md:mt-2 md:px-8"
     >
       <LayoutHeaderTopLevelNav />
     </div>

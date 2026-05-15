@@ -48,7 +48,6 @@ const defaultConfig: DefaultConfig = {
     codeCopyIcon: 'lucide:clipboard',
     codeCopyToastText: 'Copied to clipboard!',
     fieldRequiredText: 'required',
-    padded: true,
     editLink: {
       enable: false,
       pattern: '',

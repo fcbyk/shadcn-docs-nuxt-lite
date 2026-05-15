@@ -12,11 +12,11 @@
   </div>
 
   <template v-else>
+
     <!-- 全宽页面样式 (fullpage: true) -->
     <div
       v-if="page?.fullpage"
-      class="px-4 py-6 md:px-8"
-      :class="[config.main.padded && 'container']"
+      :class="[!page?.bare && 'container px-4 py-6 md:px-8']"
     >
       <ContentRenderer
         :key="page._id"
