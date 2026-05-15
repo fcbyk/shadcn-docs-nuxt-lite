@@ -79,15 +79,6 @@ interface DefaultConfig {
       [key: string]: string;
     };
   };
-  footer: {
-    credits: string;
-    links: ({
-      icon: string;
-      title: string;
-      to: string;
-      target: string;
-    })[];
-  };
   toc: {
     enable: boolean;
     enableInMobile: boolean;

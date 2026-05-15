@@ -36,14 +36,6 @@ export default defineAppConfig({
       breadCrumb: true,
       showTitle: true,
     },
-    footer: {
-      credits: 'Copyright © 2024',
-      links: [{
-        icon: 'lucide:github',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
-        target: '_blank',
-      }],
-    },
     toc: {
       enable: true,
       links: [{

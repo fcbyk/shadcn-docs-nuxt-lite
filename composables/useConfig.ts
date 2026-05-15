@@ -113,10 +113,6 @@ const defaultConfig: DefaultConfig = {
       'terminal': 'lucide:terminal',
     },
   },
-  footer: {
-    credits: '',
-    links: [],
-  },
   toc: {
     enable: true,
     enableInMobile: false,
@@ -149,7 +145,6 @@ export function useConfig() {
       const main = processedConfig.main;
       const aside = processedConfig.aside;
       const banner = processedConfig.banner;
-      const footer = processedConfig.footer;
       const toc = processedConfig.toc;
 
       return {
@@ -180,11 +175,6 @@ export function useConfig() {
           ...navKeyFromPath(route.path, 'toc', navigation.value || []),
           ...page.value?.toc,
         } as (typeof toc & DefaultConfig['toc']),
-        footer: {
-          ...footer,
-          ...navKeyFromPath(route.path, 'footer', navigation.value || []),
-          ...page.value?.footer,
-        } as (typeof footer & DefaultConfig['footer']),
       };
     },
   );

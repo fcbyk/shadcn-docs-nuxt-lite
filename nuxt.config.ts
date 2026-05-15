@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     'shadcn-nuxt',
     '@vueuse/nuxt',

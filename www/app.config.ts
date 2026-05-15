@@ -153,37 +153,6 @@ export default defineAppConfig({
         'terminal': 'lucide:terminal',
       },
     },
-    footer: {
-      credits: 'FOOTER_CREDIT',
-      links: [
-        {
-          icon: 'lucide:heart',
-          title: 'Sponsor Me',
-          to: 'https://ko-fi.com/ztl_uwu',
-          target: '_blank',
-        },
-        {
-          icon: 'lucide:twitter',
-          to: 'https://x.com/ZTL_UwU',
-          target: '_blank',
-        },
-        {
-          icon: 'lucide-lab:butterfly',
-          to: 'https://bsky.app/profile/ztl-uwu.bsky.social',
-          target: '_blank',
-        },
-        {
-          icon: 'simple-icons:discord',
-          to: 'https://discord.gg/9P5HzAz8DT',
-          target: '_blank',
-        },
-        {
-          icon: 'lucide:github',
-          to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
-          target: '_blank',
-        },
-      ],
-    },
     toc: {
       enable: true,
       enableInMobile: true,
