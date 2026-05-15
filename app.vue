@@ -3,7 +3,7 @@
   <LayoutBanner v-if="config.banner.enable" />
   <LayoutHeader />
   <div
-    v-if="page && !page.fullpage && baseRouteName !== 'index'"
+    v-if="page && !page?.fullpage"
     class="min-h-screen"
   >
     <div
@@ -42,9 +42,6 @@ const { themeClass, radius, setClassTheme } = useThemes();
 
 // Simple locale (always 'en' since i18n is removed)
 const currentLocale = computed(() => 'en');
-
-// Get base route name (simplified without i18n)
-const baseRouteName = computed(() => route.path === '/' ? 'index' : 'docs');
 
 useSeoMeta({
   description: config.value.site.description,

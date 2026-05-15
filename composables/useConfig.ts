@@ -30,11 +30,6 @@ const defaultConfig: DefaultConfig = {
     title: 'shadcn-docs',
     border: false,
     darkModeToggle: true,
-    languageSwitcher: {
-      enable: true,
-      triggerType: 'icon',
-      dropdownType: 'select',
-    },
     nav: [],
     links: [],
   },

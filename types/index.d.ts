@@ -25,11 +25,6 @@ interface DefaultConfig {
       dark: string;
     };
     darkModeToggle: boolean;
-    languageSwitcher: {
-      enable: boolean;
-      triggerType: 'icon' | 'text';
-      dropdownType: 'select' | 'popover';
-    };
     nav: ({
       title: string;
       to: string;

@@ -12,6 +12,7 @@
   </div>
 
   <template v-else>
+    <!-- 全宽页面样式 (fullpage: true) -->
     <div
       v-if="page?.fullpage"
       class="px-4 py-6 md:px-8"
@@ -23,6 +24,8 @@
         :data="(appConfig.shadcnDocs as any)?.data"
       />
     </div>
+
+    <!-- 普通文档页样式 (包含侧边栏和TOC) -->
     <main
       v-else
       class="relative py-6"
