@@ -6,7 +6,7 @@
     <div
       class="flex h-14 items-center justify-between gap-2 px-4 md:px-8"
       :class="{
-        'container max-w-screen-2xl': config.main.padded,
+        'container': config.main.padded,
       }"
     >
       <LayoutHeaderLogo class="flex-1 flex" />

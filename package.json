@@ -18,7 +18,6 @@
     "modules",
     "tailwind.config.js",
     "pages",
-    "plugins",
     "types"
   ],
   "scripts": {

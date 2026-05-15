@@ -4,7 +4,7 @@
   <LayoutHeader />
   <div
     v-if="page && !page?.fullpage"
-    class="min-h-screen"
+    :class="config.banner.enable ? 'min-h-[calc(100vh-101px)]' : 'min-h-[calc(100vh-56px)]'"
   >
     <div
       class="flex-1 items-start px-4 md:grid md:gap-6 md:px-8 lg:gap-10"
@@ -25,7 +25,7 @@
       <NuxtPage />
     </div>
   </div>
-  <div v-else class="min-h-screen">
+  <div v-else :class="config.banner.enable ? 'min-h-[calc(100vh-101px)]' : 'min-h-[calc(100vh-56px)]'">
     <NuxtPage />
   </div>
 
@@ -37,7 +37,6 @@ import Toaster from '@/components/ui/toast/Toaster.vue';
 
 const { page } = useContent();
 const config = useConfig();
-const route = useRoute();
 const { themeClass, radius, setClassTheme } = useThemes();
 
 // Simple locale (always 'en' since i18n is removed)
