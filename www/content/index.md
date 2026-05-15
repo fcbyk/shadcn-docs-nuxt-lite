@@ -1,23 +1,23 @@
 ---
-title: Home
+title: 主页
 navigation: false
-description: Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.
+description: 精美设计的 Nuxt Content 模板, 基于 shadcn-vue 构建. 可定制, 兼容, 开源.
 ---
 
 ::hero
 ---
 announcement:
-  title: 'Upgrade to Nuxt 4'
+  title: '升级到 Nuxt 4'
   icon: 'vscode-icons:file-type-nuxt'
   to: /getting-started/upgrade/v1-2
 actions:
-  - name: Get Started
+  - name: 开始使用
     to: /getting-started/introduction
   - name: GitHub
     variant: outline
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt
     leftIcon: 'lucide:github'
-  - name: Sponsor
+  - name: 赞助
     variant: outline
     target: _blank
     to: https://ko-fi.com/ztl_uwu
@@ -25,10 +25,10 @@ actions:
 ---
 
 #title
-Effortless and Beautiful :br Docs Template.
+轻松且美观的 :br 文档模板.
 
 #description
-Beautifully designed Nuxt Content template built with shadcn-vue. :br Customizable. Compatible. Open Source.
+精美设计的 Nuxt Content 模板, 基于 shadcn-vue 构建. :br 可定制, 兼容, 开源.
 ::
 
 ::div{class="border rounded-lg shadow-md"}

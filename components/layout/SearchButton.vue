@@ -8,7 +8,7 @@
       @click="isOpen = true"
     >
       <span class="mr-auto overflow-hidden">
-        {{ $t(placeholder) }}
+        {{ placeholder }}
       </span>
       <Kbd class="ml-auto hidden md:block">
         <span class="text-xs">⌘</span>K

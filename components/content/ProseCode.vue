@@ -53,7 +53,7 @@
     >
       <UiButton size="sm" variant="outline" @click="expanded = !expanded">
         <Icon :name="expanded ? 'lucide:chevron-up' : 'lucide:chevron-down'" size="18" />
-        {{ expanded ? $t('Collapse') : $t('Expand') }}
+        {{ expanded ? 'Collapse' : 'Expand' }}
       </UiButton>
     </div>
   </UiCard>

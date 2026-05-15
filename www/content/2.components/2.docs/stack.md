@@ -1,15 +1,15 @@
 ---
-title: Stack
+title: 垂直堆叠
 icon: lucide:rows-3
 badges:
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/Stack.vue
     target: _blank
   - value: 0.6.2
 ---
 
-## Usage
+## 使用
 
 ::stack
 ::div{class="p-4 md:p-8"}
@@ -64,7 +64,7 @@ badges:
 ````
 ::
 
-Stackable components:
+可堆叠组件:
 
 - `div`
 - Code Blocks

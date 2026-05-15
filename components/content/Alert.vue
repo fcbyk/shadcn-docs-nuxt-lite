@@ -54,18 +54,15 @@ const typeTwClass = {
   secondary: 'bg-muted/50',
 };
 
-const { localePath } = useI18nDocs();
-
 async function alertClick() {
   if (to) {
-    const localeTo = localePath(to);
     if (target) {
-      await navigateTo(localeTo, {
+      await navigateTo(to, {
         external: external ?? to.startsWith('http'),
         open: { target },
       });
     } else {
-      await navigateTo(localeTo, {
+      await navigateTo(to, {
         external: external ?? to.startsWith('http'),
       });
     }

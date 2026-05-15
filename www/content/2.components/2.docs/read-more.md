@@ -1,17 +1,17 @@
 ---
-title: Read More
+title: 阅读更多
 icon: lucide:bookmark
 badges:
   - value: undocs
     to: https://undocs.pages.dev/guide/components#read-more
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/ReadMore.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-4"}
@@ -29,11 +29,11 @@ badges:
   ```
 ::
 
-## Props
+## 属性
 
 ::field-group
-  :field{name="title" type="string"}[Read More title]
-  :field{name="icon" type="string"}[Read More icon]
-  :field{name="to" type="string"}[Link URL]
-  :field{name="target" type="Target"}[A `target` attribute value to apply on the link]
+  :field{name="title" type="string"}["阅读更多"的标题]
+  :field{name="icon" type="string"}["阅读更多"的图标]
+  :field{name="to" type="string"}[链接 URL]
+  :field{name="target" type="Target"}[在链接上应用的 `target` 属性值]
 ::

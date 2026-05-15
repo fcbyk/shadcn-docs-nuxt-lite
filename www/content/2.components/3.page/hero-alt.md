@@ -1,8 +1,8 @@
 ---
-title: HeroAlt
+title: 备用主视觉组件
 icon: lucide:align-left
 badges:
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/HeroAlt.vue
     target: _blank
@@ -10,7 +10,7 @@ badges:
 toc: false
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-4"}
@@ -60,7 +60,7 @@ toc: false
   ```
 ::
 
-### Right
+### 右侧
 
 ::stack
   ::div{class="p-4"}

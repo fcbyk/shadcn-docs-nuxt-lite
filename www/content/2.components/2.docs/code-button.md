@@ -1,22 +1,23 @@
 ---
-title: Code Button
+title: 代码按钮
 icon: lucide:square-code
 navBadges:
   - value: New
     type: lime
 badges:
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/CodeButton.vue
     target: _blank
   - value: 1.2.1
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-4"}
     :code-button{code="npm create nuxt@latest" icon="lucide:terminal"}
+    :br
     :code-button{code="npx nuxi@latest module add @nuxt/content" icon="lucide:package-plus"}
   ::
 
@@ -26,7 +27,7 @@ badges:
   ```
 ::
 
-### Variants
+### 变体
 
 ::tabs{variant="line"}
   ::stack{label="outline"}
@@ -66,7 +67,7 @@ badges:
   ::
 ::
 
-### Custom Copy Icon
+### 自定义复制图标
 
 ::stack
   ::div{class="p-4"}
@@ -78,12 +79,12 @@ badges:
   ```
 ::
 
-## Props
+## 属性
 
 ::field-group
-  :field{name="code" type="string"}[Code content to copy]
-  :field{name="icon" type="string"}[Icon displayed before code]
-  :field{name="variant" type="'default' | 'secondary' | 'destructive' | 'outline'" default-value="'outline'"}[Button variant]
-  :field{name="width" type="number"}[Button width in pixels]
-  :field{name="copyIcon" type="string" default-value="'lucide:copy'"}[Icon shown before copying]
+  :field{name="code" type="string"}[要复制的代码内容]
+  :field{name="icon" type="string"}[显示在代码前的图标]
+  :field{name="variant" type="'default' | 'secondary' | 'destructive' | 'outline'" default-value="'outline'"}[按钮变体]
+  :field{name="width" type="number"}[按钮宽度（像素）]
+  :field{name="copyIcon" type="string" default-value="'lucide:copy'"}[复制前显示的图标]
 ::

@@ -8,7 +8,7 @@
     </p>
 
     <div v-if="badges" class="flex gap-2 pt-4">
-      <CompatNuxtLinkLocale
+      <NuxtLink
         v-for="(badge, i) in badges"
         :key="i"
         :to="badge.to"
@@ -18,11 +18,11 @@
           {{ badge.value }}
           <SmartIcon v-if="badge.to || badge.icon" :size="12" :name="badge.icon || 'lucide:external-link'" />
         </UiBadge>
-      </CompatNuxtLinkLocale>
+      </NuxtLink>
     </div>
 
     <div v-if="authors" class="-mx-4 flex divide-x pt-4">
-      <CompatNuxtLinkLocale v-for="author in authors" :key="author.name" :to="author.to" :target="author.target" class="flex items-center gap-2 px-4">
+      <NuxtLink v-for="author in authors" :key="author.name" :to="author.to" :target="author.target" class="flex items-center gap-2 px-4">
         <UiAvatar v-if="author.avatar" class="size-8">
           <UiAvatarImage :src="author.avatar" :alt="author.name" />
         </UiAvatar>
@@ -34,7 +34,7 @@
             @{{ author.username }}
           </div>
         </div>
-      </CompatNuxtLinkLocale>
+      </NuxtLink>
     </div>
   </div>
 </template>

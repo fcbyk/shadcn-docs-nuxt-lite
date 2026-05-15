@@ -4,7 +4,7 @@
     <LayoutSearchButton v-if="config.search.inAside" />
     <ul v-if="config.aside.useLevel && config.aside.levelStyle === 'aside'" class="flex flex-col gap-1 border-b pb-4">
       <li v-for="link in navigation" :key="link.id">
-        <CompatNuxtLinkLocale
+        <NuxtLink
           :to="link.redirect ?? link._path"
           class="text-foreground/80 hover:bg-muted hover:text-primary flex h-8 items-center gap-2 rounded-md p-2 text-sm"
           :class="[
@@ -24,7 +24,7 @@
               {{ badge.value }}
             </Badge>
           </span>
-        </CompatNuxtLinkLocale>
+        </NuxtLink>
       </li>
     </ul>
     <LayoutAsideTree
@@ -40,13 +40,13 @@ defineProps<{ isMobile: boolean }>();
 
 const { navDirFromPath } = useContentHelpers();
 const config = useConfig();
-const { locale, defaultLocale, navigation } = useI18nDocs();
+const { navigation } = useContent();
 
 const tree = computed(() => {
   const route = useRoute();
   const path = route.path.split('/');
   if (config.value.aside.useLevel) {
-    const leveledPath = path.splice(0, locale.value === defaultLocale ? 2 : 3).join('/');
+    const leveledPath = path.splice(0, 2).join('/');
 
     const dir = navDirFromPath(leveledPath, navigation.value);
     return dir ?? [];

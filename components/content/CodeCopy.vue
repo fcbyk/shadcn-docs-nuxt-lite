@@ -24,12 +24,6 @@ const { code } = defineProps<{
 
 const { toast } = useToast();
 
-// Use i18n with fallback
-const nuxtApp = useNuxtApp();
-const t = typeof nuxtApp.$i18n !== 'undefined' 
-  ? (nuxtApp.$i18n as any).t 
-  : nuxtApp.$t;
-
 const { copy } = useClipboard({ source: code, legacy: true });
 const copied = ref(false);
 
@@ -41,7 +35,7 @@ async function handleClick() {
 
   if (useConfig().value.main.codeCopyToast) {
     toast({
-      description: t(useConfig().value.main.codeCopyToastText),
+      description: 'Copied to clipboard!',
     });
   }
 }

@@ -8,5 +8,5 @@
 
 <script setup lang="ts">
 const { page } = useContent();
-const { prev, next } = useI18nDocs();
+const { prev, next } = useContent();
 </script>

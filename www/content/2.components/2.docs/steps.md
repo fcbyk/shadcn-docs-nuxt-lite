@@ -1,8 +1,8 @@
 ---
-title: Steps
+title: 步骤
 icon: lucide:arrow-down-0-1
 badges:
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/Steps.vue
     target: _blank
@@ -99,7 +99,7 @@ badges:
   ```
 ::
 
-### Multi-level headings
+### 多级标题
 :badge[0.4.6]{variant="outline"}
 
 ::stack
@@ -131,6 +131,6 @@ badges:
   ```
 ::
 
-## Props
+## 属性
 
-:field{name="level" type="number"}[Specify the level of headings to use]
+:field{name="level" type="number"}[指定要使用的标题级别]

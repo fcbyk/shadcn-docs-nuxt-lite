@@ -1,18 +1,17 @@
 ---
-title: Package Manager
+title: 包管理器
 icon: lucide:package
-description: ''
 badges:
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/PmInstall.vue
     target: _blank
   - value: 0.8.0
 ---
 
-## Usage
+## 使用
 
-The package managers shown can be configured in [`main.pm`](/api/configuration/shadcn-docs#main).
+所示的包管理器可以在 [`main.pm`](/api/configuration/shadcn-docs#main) 中进行配置.
 
 ### Install
 

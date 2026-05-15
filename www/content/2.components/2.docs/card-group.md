@@ -1,17 +1,17 @@
 ---
-title: Card Group
+title: 卡片组
 icon: lucide:layout-grid
 badges:
   - value: Nuxt UI Pro
     to: https://ui.nuxt.com/pro/prose/card-group
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/CardGroup.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
 ::div{class="p-4"}
@@ -99,7 +99,7 @@ badges:
 ```
 ::
 
-### Cols
+### 列数
 
 ::stack
 ::div{class="p-4"}
@@ -168,8 +168,8 @@ badges:
 ```
 ::
 
-## Props
+## 属性
 
 ::field-group
-  :field{name="cols" type="1 | 2 | 3 | 4 | 5 | 6" default-value="2"}[Number of columns (only for desktop)]
+  :field{name="cols" type="1 | 2 | 3 | 4 | 5 | 6" default-value="2"}[列数 (仅限桌面端)]
 ::

@@ -1,17 +1,17 @@
 ---
-title: Tabs
+title: 标签页
 icon: lucide:table-2
 badges:
   - value: Nuxt UI Pro
     to: https://ui.nuxt.com/pro/prose/tabs
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/Tabs.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-4"}
@@ -102,7 +102,7 @@ badges:
   ```
 ::
 
-### Card Style
+### 卡片样式
 
 ::stack
   ::div{class="p-4"}
@@ -133,7 +133,7 @@ badges:
   ```
 ::
 
-### Line Style
+### 线型标题
 :badge[0.6.4]{variant="outline"}
 
 ::stack
@@ -171,7 +171,7 @@ badges:
   ```
 ::
 
-### Combobox Style
+### 下拉框样式
 :badge[0.7.5]{variant="outline"}
 
 ::stack
@@ -263,7 +263,7 @@ badges:
   ```
 ::
 
-### Synced Tabs
+### 已同步标签
 :badge[0.8.0]{variant="outline"}
 
 :read-more{to="/components/docs/pm"}
@@ -363,13 +363,13 @@ badges:
   ```
 ::
 
-## Props
+## 属性
 
 ::field-group
   :field{name="variant" type="'separate' | 'card' | 'line' | 'combobox'" default-value="'separate'"}
   :field{name="padded" type="boolean" default-value="true"}
-  :field{name="disableSearch" type="boolean" default-value="false"}[For combobox variant]
-  :field{name="searchPlaceholder" type="string" default-value="'Search Tab...'"}[For combobox variant]
-  :field{name="searchEmpty" type="string" default-value="'No tab found.'"}[For combobox variant]
+  :field{name="disableSearch" type="boolean" default-value="false"}[用于下拉框变体]
+  :field{name="searchPlaceholder" type="string" default-value="'Search Tab...'"}[用于下拉框变体]
+  :field{name="searchEmpty" type="string" default-value="'No tab found.'"}[用于下拉框变体]
   :field{name="sync" type="string"}[Sync scope]
 ::

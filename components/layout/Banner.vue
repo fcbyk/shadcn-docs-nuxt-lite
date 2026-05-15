@@ -23,11 +23,10 @@
 <script setup lang="ts">
 const open = useCookie<boolean>('banner-open', { default: () => true });
 const { showClose, content, to, target, border } = useConfig().value.banner;
-const { localePath } = useI18nDocs();
 
 function navigate() {
   if (open.value && to) {
-    navigateTo(localePath(to), {
+    navigateTo(to, {
       external: true,
       open: {
         target: target ?? '_blank',

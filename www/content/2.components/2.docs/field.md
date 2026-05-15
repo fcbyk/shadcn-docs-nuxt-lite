@@ -1,17 +1,17 @@
 ---
-title: Field
+title: 字段
 icon: lucide:settings-2
 badges:
   - value: Nuxt UI Pro
     to: https://ui.nuxt.com/pro/prose/field
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/Field.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-4"}
@@ -26,14 +26,14 @@ badges:
   ```
 ::
 
-The text `required` is configurable in [`main.fieldRequiredText`](/api/configuration/shadcn-docs#main).
+文本 `required` 可以在 [`main.fieldRequiredText`](/api/configuration/shadcn-docs#main) 中配置.
 
-## Props
+## 属性
 
 ::field-group
-  :field{name="name" type="string"}[Field name]
-  :field{name="type" type="string"}[Field type]
-  :field{name="description" type="string"}[Field description]
-  :field{name="defaultValue" type="string"}[Field default value]
-  :field{name="required" type="boolean"}[Whether the field is required]
+  :field{name="name" type="string"}[字段名称]
+  :field{name="type" type="string"}[字段类型]
+  :field{name="description" type="string"}[字段描述]
+  :field{name="defaultValue" type="string"}[字段默认值]
+  :field{name="required" type="boolean"}[该字段是否为必填项]
 ::

@@ -38,9 +38,9 @@
   </UseTemplate>
 
   <div class="group-has-[div]:!mt-0 [&:not(:first-child)]:mt-5">
-    <CompatNuxtLinkLocale v-if="to" :to :target>
+    <NuxtLink v-if="to" :to :target>
       <CardInner />
-    </CompatNuxtLinkLocale>
+    </NuxtLink>
     <CardInner v-else />
   </div>
 </template>

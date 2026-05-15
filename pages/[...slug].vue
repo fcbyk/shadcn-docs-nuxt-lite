@@ -7,7 +7,7 @@
       404
     </h3>
     <span class="scroll-m-20 px-4">
-      {{ $t('This page could not be found.') }}
+      This page could not be found.
     </span>
   </div>
 
@@ -43,9 +43,9 @@
             <UiEmptyMedia variant="icon">
               <Icon name="lucide:circle-x" />
             </UiEmptyMedia>
-            <UiEmptyTitle>{{ $t('Empty page') }}</UiEmptyTitle>
+            <UiEmptyTitle>Empty page</UiEmptyTitle>
             <UiEmptyDescription v-if="isDev">
-              {{ $t('Start writing content', { fileLink: '' }) }}
+              Start writing in content/{{ page?._file }} to see this page taking shape.
               <ProseCodeInline>content/{{ page?._file }}</ProseCodeInline>
             </UiEmptyDescription>
           </UiEmptyHeader>

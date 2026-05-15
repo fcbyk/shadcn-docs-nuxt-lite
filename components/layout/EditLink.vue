@@ -1,6 +1,6 @@
 <template>
   <div v-if="enabledDocsFooter" class="w-fit">
-    <CompatNuxtLinkLocale
+    <NuxtLink
       :to="url"
       target="_blank"
       class="text-primary text-sm font-semibold"
@@ -8,10 +8,10 @@
       <div class="flex items-center gap-2">
         <SmartIcon :name="icon" />
         <span>
-          {{ $t(text) }}
+          {{ text }}
         </span>
       </div>
-    </CompatNuxtLinkLocale>
+    </NuxtLink>
   </div>
 </template>
 

@@ -2,14 +2,14 @@
   <div class="grid gap-6">
     <div class="grid space-y-1">
       <h1 class="text-foreground text-lg font-semibold">
-        {{ $t('Customize') }}
+        Customize
       </h1>
       <p class="text-muted-foreground text-sm">
-        {{ $t('Pick a style and color for the docs.') }}
+        Pick a style and color for the docs.
       </p>
     </div>
     <div class="space-y-1.5">
-      <UiLabel>{{ $t('Color') }}</UiLabel>
+      <UiLabel>Color</UiLabel>
       <div class="grid grid-cols-3 gap-2">
         <template v-for="color in allColors" :key="color">
           <UiButton
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="space-y-1.5">
-      <UiLabel>{{ $t('Radius') }}</UiLabel>
+      <UiLabel>Radius</UiLabel>
       <div class="grid grid-cols-5 gap-2">
         <template v-for="r in RADII" :key="r">
           <UiButton
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div v-if="darkModeToggle" class="space-y-1.5">
-      <UiLabel>{{ $t('Theme') }}</UiLabel>
+      <UiLabel>Theme</UiLabel>
       <div class="grid grid-cols-3 gap-2">
         <UiButton
           class="justify-center gap-2"
@@ -51,7 +51,7 @@
           @click="colorMode.preference = 'light'"
         >
           <Icon name="lucide:sun" size="16" />
-          <span class="text-xs capitalize">{{ $t('Light') }}</span>
+          <span class="text-xs capitalize">Light</span>
         </UiButton>
         <UiButton
           class="justify-center gap-2"
@@ -60,7 +60,7 @@
           @click="colorMode.preference = 'dark'"
         >
           <Icon name="lucide:moon" size="16" />
-          <span class="text-xs capitalize">{{ $t('Dark') }}</span>
+          <span class="text-xs capitalize">Dark</span>
         </UiButton>
         <UiButton
           class="justify-center gap-2"
@@ -69,7 +69,7 @@
           @click="colorMode.preference = 'system'"
         >
           <Icon name="lucide:monitor" size="16" />
-          <span class="text-xs capitalize">{{ $t('System') }}</span>
+          <span class="text-xs capitalize">System</span>
         </UiButton>
       </div>
     </div>

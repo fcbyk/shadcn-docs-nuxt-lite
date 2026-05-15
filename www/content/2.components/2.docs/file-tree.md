@@ -1,15 +1,15 @@
 ---
-title: File Tree
+title: 文件树
 icon: lucide:folder-tree
 badges:
   - value: 0.8.10
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/FileTree.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
 ::div{class="p-4"}
@@ -46,7 +46,7 @@ tree:
 ```
 ::
 
-### Customizations
+### 自定义
 
 ::stack
 ::div{class="p-4"}
@@ -54,8 +54,8 @@ tree:
   ---
   title: File Tree Title
   icon: lucide:folder-tree
-  autoSlash: false   # Whether to add a slash after every folder automatically
-  showArrow: true    # Whether to show the guide arrow
+  autoSlash: false   # 是否自动在每个文件夹后添加斜杠
+  showArrow: true    # 是否显示折叠箭头
   tree:
     - components:
       - layout:
@@ -75,8 +75,8 @@ tree:
 ---
 title: File Tree Title
 icon: lucide:folder-tree
-autoSlash: false   # Whether to add a slash after every folder automatically
-showArrow: true    # Whether to show the collapse arrow
+autoSlash: false   # 是否自动在每个文件夹后添加斜杠
+showArrow: true    # 是否显示折叠箭头
 tree:
   - components:
     - layout:
@@ -92,7 +92,7 @@ tree:
 ::
 ```
 ::
-### Disable Icons
+### 禁用图标
 
 ::stack
 ::div{class="p-4"}
@@ -131,7 +131,7 @@ tree:
 ```
 ::
 
-### Diff
+### 差异
 
 ::stack
 ::div{class="p-4"}
@@ -170,13 +170,13 @@ tree:
 ```
 ::
 
-## Props
+## 属性
 
 ::field-group
-  :field{name="tree"}[The file tree]
-  :field{name="title" type="string"}[File tree title]
-  :field{name="icon" type="string"}[File tree title icon]
-  :field{name="autoSlash" type="boolean" default-value="true"}[Whether to add a slash after every folder automatically]
-  :field{name="showArrow" type="boolean" default-value="false"}[Whether to show the collapse arrow]
-  :field{name="showIcon" type="boolean" default-value="true"}[Whether to show file & folder icons]
+  :field{name="tree"}[文件树]
+  :field{name="title" type="string"}[文件树标题]
+  :field{name="icon" type="string"}[文件树标题图标]
+  :field{name="autoSlash" type="boolean" default-value="true"}[是否自动在每个文件夹后添加斜杠]
+  :field{name="showArrow" type="boolean" default-value="false"}[是否显示折叠箭头]
+  :field{name="showIcon" type="boolean" default-value="true"}[是否显示文件和文件夹图标]
 ::

@@ -1,17 +1,17 @@
 ---
-title: Field Group
+title: 字段组
 icon: lucide:settings-2
 badges:
   - value: Nuxt UI Pro
     to: https://ui.nuxt.com/pro/prose/field-group
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/FieldGroup.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-4"}

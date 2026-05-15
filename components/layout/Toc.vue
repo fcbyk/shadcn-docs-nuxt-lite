@@ -13,7 +13,7 @@
     >
       <div v-if="toc?.links.length">
         <p class="mb-2 text-base font-semibold">
-          {{ $t(title) }}
+          {{ title }}
         </p>
         <LayoutTocTree
           :links="toc.links.filter((x: any) => x.id !== 'hide-toc')"
@@ -22,10 +22,10 @@
         />
       </div>
       <div v-if="links.length" class="text-muted-foreground" :class="[iconLinks?.length && 'border-b pb-5']">
-        <CompatNuxtLinkLocale
+        <NuxtLink
           v-for="(link, i) in links"
           :key="i"
-          :to="localePath(link.to)"
+          :to="link.to"
           :target="link.target"
           class="flex w-full gap-1 underline-offset-4 hover:underline [&:not(:first-child)]:pt-3"
         >
@@ -34,15 +34,15 @@
             :name="link.icon"
             class="mr-1 self-center"
           />
-          {{ $t(link.title) }}
+          {{ link.title }}
           <Icon v-if="link.showLinkIcon ?? (link.target === '_blank')" name="lucide:arrow-up-right" class="text-muted-foreground ml-auto self-center" size="13" />
-        </CompatNuxtLinkLocale>
+        </NuxtLink>
       </div>
       <div v-if="iconLinks" class="text-muted-foreground">
-        <CompatNuxtLinkLocale
+        <NuxtLink
           v-for="(link, i) in iconLinks"
           :key="i"
-          :to="localePath(link.to)"
+          :to="link.to"
           :target="link.target"
         >
           <UiButton size="icon" variant="ghost" class="size-7">
@@ -51,7 +51,7 @@
               :name="link.icon"
             />
           </UiButton>
-        </CompatNuxtLinkLocale>
+        </NuxtLink>
       </div>
       <div class="flex-grow" />
     </div>
@@ -62,7 +62,7 @@
     class="block w-full text-sm lg:hidden"
   >
     <UiCollapsibleTrigger class="flex w-full px-4 md:px-8 py-3 text-left font-medium">
-      {{ $t(title) }}
+      {{ title }}
       <Icon
         name="lucide:chevron-right"
         class="ml-auto self-center transition-all"
@@ -80,7 +80,6 @@ defineProps<{ isSmall: boolean }>();
 const config = useConfig();
 
 const { toc } = useContent();
-const { localePath } = useI18nDocs();
 const { title, links: configLinks, iconLinks } = useConfig().value.toc;
 
 const isOpen = ref(false);

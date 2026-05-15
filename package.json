@@ -12,7 +12,6 @@
     "assets",
     "components",
     "composables",
-    "i18n",
     "layouts",
     "lib",
     "nuxt.config.ts",

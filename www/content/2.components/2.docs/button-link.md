@@ -1,18 +1,18 @@
 ---
-title: Button Link
+title: 按钮链接
 icon: lucide:external-link
 badges:
   - value: Docus
     to: https://docus.dev/api/components#buttonlink
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/ButtonLink.vue
     target: _blank
   - value: 0.6.5
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-3 flex gap-4"}
@@ -39,15 +39,15 @@ badges:
   ```
 ::
 
-## Props
+## 属性
 
 ::field-group
   :field{name="variant" type="'default' | 'secondary' | 'link' | 'destructive' | 'outline' | 'ghost'" default-value="'default'"}
   :field{name="size" type="'default' | 'icon' | 'sm' | 'xs' | 'lg'" default-value="'default'"}
-  :field{name="leftIcon" type="string"}[Icon on the left]
-  :field{name="rightIcon" type="string"}[Icon on the right]
-  :field{name="to" type="string"}[Link URL]
-  :field{name="href" type="string"}[Alias to `to`]
-  :field{name="target" type="Target"}[A `target` attribute value to apply on the link]
-  :field{name="blank" type="boolean"}[Alias to `target='_blank'`]
+  :field{name="leftIcon" type="string"}[左侧图标]
+  :field{name="rightIcon" type="string"}[右侧图标]
+  :field{name="to" type="string"}[链接 URL]
+  :field{name="href" type="string"}[`to` 的别名]
+  :field{name="target" type="Target"}[在链接上应用的 `target` 属性值]
+  :field{name="blank" type="boolean"}[`target='_blank'` 的别名]
 ::

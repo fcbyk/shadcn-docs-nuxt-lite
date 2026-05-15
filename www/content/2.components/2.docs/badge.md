@@ -1,17 +1,17 @@
 ---
-title: Badge
+title: 徽章
 icon: lucide:badge
 badges:
   - value: Docus
     to: https://docus.dev/api/components#badge
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/Badge.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-3"}
@@ -32,7 +32,7 @@ badges:
   ```
 ::
 
-### Variants
+### 变体
 
 ::tabs{variant="line"}
   ::stack{label="outline"}
@@ -99,7 +99,7 @@ badges:
   ::
 ::
 
-### Link
+### 链接
 
 ::stack
   ::div{class="p-3"}
@@ -114,12 +114,12 @@ badges:
   ```
 ::
 
-## Props
+## 属性
 
 ::field-group
   :field{name="type" type="'default' | 'info' | 'warning' | 'success' | 'danger' | 'lime'" default-value="'default'"}
   :field{name="variant" type="'default' | 'secondary' | 'destructive' | 'outline'" default-value="'default'"}
   :field{name="size" type="'md' | 'sm'" default-value="'md'"}
-  :field{name="to" type="string"}[Link URL]
-  :field{name="target" type="Target"}[A `target` attribute value to apply on the link]
+  :field{name="to" type="string"}[链接 URL]
+  :field{name="target" type="Target"}[在链接上应用的 `target` 属性值]
 ::

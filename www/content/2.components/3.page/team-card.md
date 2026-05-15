@@ -1,9 +1,9 @@
 ---
-title: Team Card
+title: 团队卡片
 icon: lucide:users
 description: ''
 badges:
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/TeamCard.vue
     target: _blank

@@ -1,14 +1,14 @@
 ---
-title: Hero
+title: 主视觉组件
 icon: lucide:align-center
 badges:
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/Hero.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
   ::div{class="p-4"}

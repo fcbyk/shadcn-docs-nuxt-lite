@@ -11,7 +11,7 @@
         <UiCommandInputOnly
           v-model="input"
           :loading="searchLoading"
-          :placeholder="$t(placeholderDetailed)"
+          :placeholder="placeholderDetailed"
           @keydown.enter="handleEnter"
           @keydown.down="handleNavigate(1)"
           @keydown.up="handleNavigate(-1)"
@@ -20,35 +20,34 @@
           <template v-if="!input?.length">
             <template v-for="item in navigation" :key="item._path">
               <UiCommandGroup v-if="item.children" :heading="item.title" class="p-1.5">
-                <CompatNuxtLinkLocale v-for="child in item.children" :key="child.id" :to="child._path">
-                  <UiCommandItem :value="child._path">
-                    <SmartIcon v-if="child.icon" :name="child.icon" class="mr-2 size-4" />
-                    <div v-else class="mr-2 size-4" />
-                    <span>{{ child.title }}</span>
-                  </UiCommandItem>
-                </CompatNuxtLinkLocale>
+              <NuxtLink v-for="child in item.children" :key="child.id" :to="child._path">
+                <UiCommandItem :value="child._path">
+                  <SmartIcon v-if="child.icon" :name="child.icon" class="mr-2 size-4" />
+                  <div v-else class="mr-2 size-4" />
+                  <span>{{ child.title }}</span>
+                </UiCommandItem>
+              </NuxtLink>
               </UiCommandGroup>
               <UiCommandSeparator v-if="item.children" />
             </template>
             <UiCommandGroup v-if="darkModeToggle" heading="Theme" class="p-1.5">
               <UiCommandItem value="light" @click="colorMode.preference = 'light'">
                 <Icon name="lucide:sun" class="mr-2 size-4" />
-                <span>{{ $t('Light') }}</span>
+                <span>Light</span>
               </UiCommandItem>
               <UiCommandItem value="dark" @click="colorMode.preference = 'dark'">
                 <Icon name="lucide:moon" class="mr-2 size-4" />
-                <span>{{ $t('Dark') }}</span>
+                <span>Dark</span>
               </UiCommandItem>
               <UiCommandItem value="system" @click="colorMode.preference = 'auto'">
                 <Icon name="lucide:monitor" class="mr-2 size-4" />
-                <span>{{ $t('System') }}</span>
+                <span>System</span>
               </UiCommandItem>
             </UiCommandGroup>
           </template>
           <div v-else-if="searchResult?.length" class="p-1.5">
-            <CompatNuxtLinkLocale
+            <NuxtLink
               v-for="(item, i) in searchResult"
-              :id="i"
               :key="item.id"
               :to="item.id"
               class="hover:bg-muted flex select-none rounded-md p-2 hover:cursor-pointer"
@@ -66,10 +65,10 @@
                 {{ item.title }}
               </span>
               <span class="text-muted-foreground ml-2 self-center truncate text-xs" v-html="getHighlightedContent(item.content)" />
-            </CompatNuxtLinkLocale>
+            </NuxtLink>
           </div>
           <div v-else class="text-muted-foreground pt-4 text-center">
-            {{ $t('No results found.') }}
+            No results found.
           </div>
         </UiCommandList>
       </UiCommand>
@@ -104,8 +103,6 @@ const input = ref('');
 const searchResult = ref();
 const searchLoading = ref(false);
 
-const { localizeSearchResult } = useI18nDocs();
-
 watch(
   input,
   async (v) => {
@@ -116,7 +113,7 @@ watch(
     searchLoading.value = true;
     const result = (await searchContent(v)).value;
 
-    searchResult.value = localizeSearchResult(result);
+    searchResult.value = result;
     searchLoading.value = false;
   },
 );
@@ -126,7 +123,7 @@ function getHighlightedContent(text: string) {
 }
 
 const { navKeyFromPath } = useContentHelpers();
-const { navigation } = useI18nDocs();
+const { navigation } = useContent();
 
 function getItemIcon(path: string) {
   return navKeyFromPath(path, 'icon', navigation.value);

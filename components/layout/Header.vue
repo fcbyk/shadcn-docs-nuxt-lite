@@ -17,19 +17,18 @@
         </div>
         <div class="flex">
           <LayoutSearchButton v-if="!config.search.inAside && config.search.style === 'button'" />
-          <LangSwitcher v-if="i18nEnabled" />
           <ThemePopover v-if="config.theme.customizable" />
           <DarkModeToggle v-if="config.header.darkModeToggle" />
-          <CompatNuxtLinkLocale
+          <NuxtLink
             v-for="(link, i) in config.header.links"
             :key="i"
-            :to="localePath(link?.to)"
+            :to="link?.to"
             :target="link?.target"
           >
             <UiButton variant="ghost" size="icon" class="flex gap-2">
               <SmartIcon v-if="link?.icon" :name="link.icon" :size="18" />
             </UiButton>
-          </CompatNuxtLinkLocale>
+          </NuxtLink>
         </div>
         <LayoutMobileNav />
       </div>
@@ -51,7 +50,6 @@
 
 <script setup lang="ts">
 const config = useConfig();
-const { i18nEnabled, localePath } = useI18nDocs();
 const { page } = useContent();
 
 const showToc = computed(() => {
@@ -61,10 +59,5 @@ const showToc = computed(() => {
 });
 
 const route = useRoute();
-const nuxtApp = useNuxtApp();
-const baseRouteName = computed(() => {
-  // useRouteBaseName is only available when i18n is installed
-  const useRouteBaseNameFn = nuxtApp.$routeBaseName;
-  return useRouteBaseNameFn ? useRouteBaseNameFn(route) : 'index';
-});
+const baseRouteName = computed(() => route.path === '/' ? 'index' : 'docs');
 </script>

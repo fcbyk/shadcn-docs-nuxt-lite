@@ -1,15 +1,15 @@
 ---
-title: Code Tree
+title: 代码树
 icon: lucide:folder-code
 badges:
   - value: 0.8.17
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/CodeTree.vue
     target: _blank
 ---
 
-## Usage
+## 使用
 
 ::stack
 ::div{class="p-4"}
@@ -161,6 +161,7 @@ badges:
   ````
   ::
 ::
+
 `````mdc height=400
 ::code-tree{defaultValue="nuxt.config.ts" title="Sample Nuxt App"}
 
@@ -313,10 +314,10 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 `````
 ::
 
-## Props
+## 属性
 
 ::field-group
-  :field{name="defaultValue"}[Default open file]
-  :field{name="title" type="string"}[Code tree title]
+  :field{name="defaultValue"}[默认打开的文件]
+  :field{name="title" type="string"}[代码树标题]
   :field{name="height" type="number" default-value="400"}
 ::

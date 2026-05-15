@@ -1,18 +1,18 @@
 ---
-title: Shortcut
+title: 快捷键
 icon: lucide:keyboard
 badges:
   - value: Nuxt UI Pro
     to: https://ui.nuxt.com/pro/prose/shortcut
     target: _blank
-  - value: Source
+  - value: 源代码
     icon: lucide:code
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/components/content/Shortcut.vue
     target: _blank
   - value: 0.6.3
 ---
 
-## Usage
+## 使用
 
 ::stack
 ::div{class="p-4"}
@@ -26,11 +26,11 @@ badges:
 ```
 ::
 
-You can put `meta` in the `value` field to automatically display either :shortcut{value="⌘"} or :shortcut{value="Ctrl"} based on the platform.
+你可以在 `value` 字段中放置 `meta`, 以根据平台自动显示 :shortcut{value="⌘"} 或 :shortcut{value="Ctrl"}
 
-## Props
+## 属性
 
 ::field-group
-  :field{name="value" type="string"}[Text in the shortcut]
+  :field{name="value" type="string"}[快捷键内的文本]
   :field{name="size" type="'xs' | 'sm' | 'md'" default-value="'sm'"}
 ::
