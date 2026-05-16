@@ -104,7 +104,12 @@ const expanded = ref(false);
 const iconMap = new Map(Object.entries(useConfig().value.main.codeIcon));
 const icon = computed(() => {
   const filenameLow = filename?.toLowerCase();
-  return parsedMeta.value.get('icon') || (filenameLow && iconMap.get(filenameLow)) || (language && iconMap.get(language));
+  const metaIcon = parsedMeta.value.get('icon');
+  
+  // 支持 icon=none 来隐藏图标
+  if (metaIcon === 'none') return null;
+  
+  return metaIcon || (filenameLow && iconMap.get(filenameLow)) || (language && iconMap.get(language));
 });
 </script>
 
