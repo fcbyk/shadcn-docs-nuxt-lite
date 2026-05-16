@@ -25,6 +25,7 @@
           parsedMeta.has('line-numbers') && 'show-line-number',
           expanded && 'pb-14',
         ]"
+        style="white-space: pre;"
       >
         <slot />
       </div>
@@ -40,6 +41,7 @@
           !language && 'pl-3',
           parsedMeta.has('line-numbers') && 'show-line-number',
         ]"
+        style="white-space: pre;"
       >
         <slot />
       </div>
@@ -124,6 +126,7 @@ const icon = computed(() => {
 .language-text {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+  white-space: pre !important;
 }
 
 .inline-copy .line {

@@ -46,8 +46,17 @@ defineProps({
 </script>
 
 <style>
+pre, pre code, pre code span {
+  /* 强制使用等宽字体，确保树形图对齐 */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-variant-ligatures: none !important;
+  font-kerning: none !important;
+  text-rendering: auto !important;
+  white-space: pre !important;
+}
+
 pre code .line{
   display: block;
-  min-height: 1rem
+  min-height: 1rem;
 }
 </style>
